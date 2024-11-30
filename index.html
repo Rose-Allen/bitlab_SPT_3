@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      input,
+      select {
+        margin: 10px;
+        padding: 5px;
+        font-size: 16px;
+      }
+      table {
+        margin: 20px auto;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Currency Converter</h1>
+    <form id="converterForm">
+      <label for="amount">Введите сумму:</label>
+      <input type="number" id="amount" name="amount" required />
+      <select id="currency" name="currency">
+        <option value="KZT">KZT</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+      <button type="button" onclick="convertCurrency()">Конвертировать</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>KZT (тенге)</th>
+          <th>USD (доллар)</th>
+          <th>EUR (евро)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="kzt">-</td>
+          <td id="usd">-</td>
+          <td id="eur">-</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
